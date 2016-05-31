@@ -22,5 +22,13 @@ namespace SecondTask.AddressBook
         public string PhoneNumber { get; set; }
         public GenderType Gender { get; set; }
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            string aboutUser = " " + FirstName + " " + LastName + ", " + Gender + ", " + Birthdate.ToString() +", "+ "\n" +
+                                 City + ", " + Address + ", " + "\n" + PhoneNumber + ", " + Email + "\n" + " was added " +
+                               TimeAdded.ToString();
+            return aboutUser;
+        }
     }
 }
